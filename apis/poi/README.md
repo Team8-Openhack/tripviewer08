@@ -2,6 +2,8 @@
 # POI Service
 
 ## Overview
+Welcome to POI API!
+
 
 ## Build the Application
 
