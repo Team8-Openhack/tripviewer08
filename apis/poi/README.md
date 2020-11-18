@@ -2,7 +2,7 @@
 # POI Service
 
 ## Overview
-POI Destruction 7
+POI Destruction 8
 
 
 ## Build the Application
