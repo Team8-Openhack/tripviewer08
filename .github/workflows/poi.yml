@@ -41,6 +41,7 @@ jobs:
 
   poi_image_build_push:
     
+    needs: poi_build_test 
     runs-on: ubuntu-latest
     
     steps:
