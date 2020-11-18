@@ -2,7 +2,7 @@
 # POI Service
 
 ## Overview
-Welcome to POI API!
+POI Destruction
 
 
 ## Build the Application
