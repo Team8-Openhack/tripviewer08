@@ -38,3 +38,23 @@ jobs:
             title: "${{ env.build_name }} Workflow ${{ github.run_number }} Failed! ",
             body: body
           });
+
+  poi_image_build_push:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: ACR build
+        id: acr
+        uses: ams0/acr-task-github-action@v1
+        with:
+          service_principal: ${{ secrets.ACRSPTEAM4_APPID }}
+          service_principal_password: ${{ secrets.ACRSPTEAM4 }}
+          tenant: ${{ secrets.TENANT }}
+          registry: ${{ secrets.REGISTRY }}
+          repository: ${{ secrets.POI_REPOSITORY_NAME }}
+          image: ${{ github.run_number }}
+          #tag: ${{ github.run_number }}
+          git_access_token: ${{ secrets.git_access_token }}
+          folder: apis/poi/web
+          dockerfile: ./Dockerfile
