@@ -11,7 +11,7 @@ on:
       - 'apis/poi/**'
 
 jobs:
-  build_test:
+  poi_build_test:
 
     runs-on: ubuntu-latest
 
