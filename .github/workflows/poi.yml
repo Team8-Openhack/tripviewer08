@@ -59,3 +59,11 @@ jobs:
           git_access_token: ${{ secrets.git_access_token }}
           folder: apis/poi/web
           dockerfile: ./Dockerfile
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'openhackfda94sn6poi'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.POI_PUBLISH_PROFILE }}
+          images: 'openhackfda94sn6acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}'
