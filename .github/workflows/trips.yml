@@ -32,10 +32,10 @@ jobs:
         fi
   
     - name: Build
-      run: go build -v './api/trips'
+      run: go build -v 'api/trips'
 
     - name: Test
-      run: go test -v './api/trips/tests'
+      run: go test -v 'api/trips/tests'
     
     - uses: actions/github-script@0.9.0
       if: failure()
