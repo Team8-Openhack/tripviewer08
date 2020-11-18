@@ -28,8 +28,6 @@ jobs:
      
     - name: The job has failed
       if: ${{ failure() }}
-      uses: JasonEtco/create-an-issue@v2.4.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: ouzi-dev/commit-status-updater@v1.1.0
 
       
