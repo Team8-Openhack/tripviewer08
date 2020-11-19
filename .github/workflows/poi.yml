@@ -98,4 +98,4 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az webapp deployment slot swap -g "openhackfda94sn6rg" -n "openhackfda94sn6poi" --slot production --target-slot staging 
+            az webapp deployment slot swap -g "openhackfda94sn6rg" -n "openhackfda94sn6poi" --slot staging --target-slot production
