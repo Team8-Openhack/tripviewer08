@@ -58,7 +58,7 @@ jobs:
       run: mvn -B package --file './apis/user-java/pom.xml'
       
     - name: Test
-      run: mvn -test
+      run: mvn test
      
 #     - uses: actions/github-script@0.9.0
 #       if: failure()
