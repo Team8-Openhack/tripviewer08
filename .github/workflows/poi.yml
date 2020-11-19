@@ -71,3 +71,10 @@ jobs:
           app-name: 'openhackfda94sn6poi'
           slot-name: 'staging'
           images: 'openhackfda94sn6acr.azurecr.io/devopsoh/api-poi:${{ github.run_number }}'
+                   
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v1.2
+        with:
+          # Check the following URLs one by one sequentially
+          url: https://openhackfda94sn6poi-staging.azurewebsites.net/api/healthcheck/poi
+           
