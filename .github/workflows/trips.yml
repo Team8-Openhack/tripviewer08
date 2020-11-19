@@ -24,13 +24,13 @@ jobs:
         go-version: 1.12
 
     - name: Install dependencies
-      run: go get ./apis/trips
+      run: go get
 
-    - name: Build
-      run: go build -v ./apis/trips
+    # - name: Build
+    #  run: go build -v ./apis/trips
 
     - name: Run Unit Tests
-      run: go test ./apis/trips/tests
+      run: go test ./tests
     
     - uses: actions/github-script@0.9.0
       if: failure()
