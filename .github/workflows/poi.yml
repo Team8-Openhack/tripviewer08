@@ -77,4 +77,10 @@ jobs:
         with:
           # Check the following URLs one by one sequentially
           url: https://openhackfda94sn6poi-staging.azurewebsites.net/api/healthcheck/poi
-           
+      - name: SwapSlot
+        if: success()
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            az webapp deployment slot swap -g "openhackfda94sn6rg" -n "openhackfda94sn6poi" --slot staging --target-slot production             
